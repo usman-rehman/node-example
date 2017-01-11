@@ -28,9 +28,7 @@ module.exports = function(req,res){
 			  // succeed
 			helper.getTitle(url,function(error,response){
 		  		res.write(view.getSingleTitle(response))
-		  		if (this.status === 200){
-		  			promise.resolve(response)
-		  		}
+		  			resolve(response)
 		  	})
 		});
 		return promise;
